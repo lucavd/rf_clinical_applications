@@ -1,9 +1,9 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
+title: "Random Forest Applications for Clinical and Experimental Research"
+author: "Luca Vedovelli, Daniele Bottigliengo, Dario Gregori"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Down the rabbit-hole
+# Introduction
 
