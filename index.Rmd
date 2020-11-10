@@ -1,9 +1,15 @@
---- 
+---
 title: "Random Forest Applications for Clinical and Experimental Research"
 author: "Luca Vedovelli, Daniele Bottigliengo, Dario Gregori"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+bibliography: references.bib
 ---
 
 # Introduction
 
+## From a Tree to a Forest
+
+If you want a forest, you need to start from tree. No different approach is needed in statistics. Random Forest (RF) is a technique that needs a heavy computational load but in its atomic components, it is based on the very much simpler Decision Tree [[FIGURA TREE DA FARE]]{.ul}. If it is more familiar, you can imagine a decision tree also as a *flow diagram* where each block splits in two branches whether you answer "yes" or "no" to the question asked in the block. The last block is your outcome variable(s), your experimental question, while the previous variables of the chain are your predictors. Tree-based methods can be used for a large number of designs, with classification and regression to be the most popular. They are simple to employ and interpret but they are usually less accurate than their classical counterparts. And here it comes the forest. The intuition of Leo Breiman and colleagues [@breiman2001] was that combining a large number of trees with different computational techniques can often result in dramatic improvements in accuracy. The drawback is that some interpretation clearness is lost, but can be regained quite easily further elaborating the results.
+
+## Trees on Steroids - bagging and boosting

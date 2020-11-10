@@ -24,7 +24,7 @@
 <meta name="author" content="Luca Vedovelli, Daniele Bottigliengo, Dario Gregori" />
 
 
-<meta name="date" content="2020-11-03" />
+<meta name="date" content="2020-11-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 
 <link rel="next" href="classification.html"/>
-<script src="libs/header-attrs-2.4.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -72,7 +72,11 @@
 <li><a href="./">Random Forest Applications</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#from-a-tree-to-a-forest"><i class="fa fa-check"></i><b>1.1</b> From a Tree to a Forest</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#trees-on-steroids---bagging-and-boosting"><i class="fa fa-check"></i><b>1.2</b> Trees on Steroids - bagging and boosting</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="classification.html"><a href="classification.html"><i class="fa fa-check"></i><b>2</b> Classification</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -96,11 +100,18 @@
 <div id="header">
 <h1 class="title">Random Forest Applications for Clinical and Experimental Research</h1>
 <p class="author"><em>Luca Vedovelli, Daniele Bottigliengo, Dario Gregori</em></p>
-<p class="date"><em>2020-11-03</em></p>
+<p class="date"><em>2020-11-10</em></p>
 </div>
 <div id="introduction" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<div id="from-a-tree-to-a-forest" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> From a Tree to a Forest</h2>
+<p>If you want a forest, you need to start from tree. No different approach is needed in statistics. Random Forest (RF) is a technique that needs a heavy computational load but in its atomic components, it isbased on the very much simpler Decision Tree <u>[FIGURA TREE DA FARE]</u>. If it is more familiar, you can imagine a decision tree also as a <em>flow diagram</em> where each block splits in two branches whether you answer “yes” or “no” to the question asked in the block. The last block is your outcome variable(s), your experimental question, while the previous variables of the chain are your predictors. Tree-based methods can be used for a large number of designs, with classification and regression to be the most popular. They are simple to employ and interpret but they are usually less accurate than their classical counterparts. And here it comes the forest. The intuition of Leo Breiman and colleagues <span class="citation">(Breiman 2001)</span> was that combining a large number of trees with different computational techniques can often result in dramatic improvements in accuracy. The drawback is that some interpretation clearness is lost, but can be regained quite easily further elaborating the results.</p>
+</div>
+<div id="trees-on-steroids---bagging-and-boosting" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Trees on Steroids - bagging and boosting</h2>
 
+</div>
 </div>
             </section>
 
