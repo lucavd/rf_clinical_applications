@@ -1,2 +1,3 @@
 # Classification
 
+The simplest application of the RF is *classification.*

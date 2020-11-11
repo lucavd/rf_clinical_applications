@@ -1,5 +1,5 @@
 ---
-title: "Random Forest Applications for Clinical and Experimental Research"
+title: "Random Forest Applications in Clinical and Experimental Research: a Guide for Humans"
 author: "Luca Vedovelli, Daniele Bottigliengo, Dario Gregori"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -12,4 +12,8 @@ bibliography: references.bib
 
 If you want a forest, you need to start from tree. No different approach is needed in statistics. Random Forest (RF) is a technique that needs a heavy computational load but in its atomic components, it is based on the very much simpler Decision Tree [[FIGURA TREE DA FARE]]{.ul}. If it is more familiar, you can imagine a decision tree also as a *flow diagram* where each block splits in two branches whether you answer "yes" or "no" to the question asked in the block. The last block is your outcome variable(s), your experimental question, while the previous variables of the chain are your predictors. Tree-based methods can be used for a large number of designs, with classification and regression to be the most popular. They are simple to employ and interpret but they are usually less accurate than their classical counterparts. And here it comes the forest. The intuition of Leo Breiman and colleagues [@breiman2001] was that combining a large number of trees with different computational techniques can often result in dramatic improvements in accuracy. The drawback is that some interpretation clearness is lost, but can be regained quite easily further elaborating the results.
 
-## Trees on Steroids - bagging and boosting
+## Trees on Steroids
+
+In RF, the "forest" is build from a large number of decision trees that work as an *ensemble,* where multiple learning algorithms are are combined to get better predictions that could be obtained but each single algorithm.
+
+In practice, the simplest question to ask to a RF model is whether, based on its characteristics (variables), a patient is predicted to belong to a specific group (e.g. with a disease or not). The RF algorithm thus forms a large number of decision trees obtained from sampling randomly from the available data. Each different tree then predicts the patient group based on the given subset of data. Finally, the most "voted" group is selected as the most probable one. The underlying philosophy is the *wisdom of the crowd,* wherea large number of uncorrelated trees operating as a committee will outperform each individual model. The low correlation between each tree model protects them from systematic errors and thus it is the key of RF performance. This is ensured by the random sampling of the data used for each tree that is called **bagging** (short for "bootstrap aggregation")[@james2013]. Moreover, to further diminish the correlation among trees, the RF algorithm randomizes also the variables to use to build a tree. The final result is a collection of trees that are not only trained on different data, but also on different variables to make a decision.
